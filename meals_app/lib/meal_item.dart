@@ -46,7 +46,9 @@ class MealItem extends StatelessWidget {
   }
 
   void selectedMeal(ctx) {
-    Navigator.of(ctx).pushNamed('/meal-detail', arguments: id);
+    Navigator.of(ctx)
+        .pushNamed('/meal-detail', arguments: id)
+        .then((value) => print(value));
   }
 
   @override
